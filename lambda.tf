@@ -1,8 +1,4 @@
 data "archive_file" "lambda" {
-  depends_on = [
-    null_resource.run_yarn_tsc,
-  ]
-
   type        = "zip"
   source_dir  = "${path.module}/fn/dist/"
   output_path = "${path.module}/artifact/${var.project_name}-upload-ssl-cert-to-s3-fn.zip"
