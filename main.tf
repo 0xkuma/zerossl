@@ -6,8 +6,11 @@
 #   working_dir = "${path.module}/fn"
 # }
 
-resource "null_resource" "run_yarn_tsc" {
-  provisioner "local-exec" {
-    command = "cd ${path.module}/fn && yarn tsc"
-  }
-}
+# resource "null_resource" "run_yarn_tsc" {
+#   provisioner "local-exec" {
+#     command = "cd ${path.module}/fn && yarn tsc"
+#   }
+#   triggers = {
+#     always_run = timestamp()
+#   }
+# }
