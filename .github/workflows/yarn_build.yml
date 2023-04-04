@@ -3,6 +3,9 @@ name: Yarn Build
 on:
   push:
     branches:
+      - dev
+  pull_request:
+    branches:
       - master
 
 jobs:
